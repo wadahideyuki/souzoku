@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import "mq";
+@import "var";
+.contact{
+  .foot-contact{
+    display: none;
+  }
+}
+.catForm{
+  background: url(../img/bg3.jpg) repeat;
+  .title-box{
+    background: $color1;
+    color: #FFF;
+    position: relative;
+    &:after{
+      content: "";
+      background: url(../img/bg2.png);
+      height: 30px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: -29px;
+    }
+  }
+	.content{
+    padding: 80px 0;
+		.btn{
+			margin: 0 0.5em;
+		}
+	}
+	table{
+		color: #333;
+	}
+	@include mq{
+		.content{
+			.btn{
+				margin: 0;
+				width: 100%;
+				& + .btn{
+					margin-top: 3%;
+				}
+			}
+		}
+	}
+}
+/* トップ */
+.catForm.pageTop{
+}
+/* 確認 */
+.catForm.pageMailConf{
+	padding: 50px 0;
+	.formConfBox{
+		max-width: 800px;
+		margin: auto;
+		padding: 0 15px;
+		font-size: 1.6em;
+	}
+}
+/* 完了 */
+.catForm.pageMailComp{
+	padding: 50px 0;
+	.formCompBox{
+		max-width: 800px;
+		margin: auto;
+		padding: 0 15px;
+		font-size: 1.6em;
+		strong{
+			display: block;
+			margin-bottom: 0.3em;
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		p{
+			margin-bottom: 1.5em;
+		}
+	}
+}
+

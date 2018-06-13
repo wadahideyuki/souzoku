@@ -1,0 +1,474 @@
+@import "reset";
+@import "mq";
+@import "var";
+
+html{
+	@include mq{
+		font-size: vw(10);
+	}
+}
+
+.title-box{
+	background:url(../img/service/main_bg.png) center center no-repeat;
+	background-size: cover;
+	padding: 0px 0 140px;
+	color: #FFF;
+	line-height: (65/50);
+	.title-main{
+		span{
+			display: block;
+			line-height: 1;
+			small{
+				display: inline-block;
+				background-color: #fff;
+				margin-bottom: 1em;
+				padding: 0.5em 1.2em;
+				color: #881b1b;
+				font-size: (23/50) * 1em;
+				border-radius: 50px;
+			}
+		}
+	}
+	@include mq{
+		padding: 3% 3% 10%;
+		.title-main{
+			padding: 1.8em 0 0;
+			font-size: 2rem;
+      br{
+        display: none;
+      }
+			span{
+        small{
+          font-size: 1rem;
+        }
+			}
+		}
+	}
+}
+
+
+
+
+.inner.W900{max-width: 900px;}
+
+.contArw{
+	position: relative;
+	&:after{
+		content: "";
+		width: 0;
+		height: 0;
+		margin: auto;
+		border-style: solid;
+		border-width: 32px 46px 0;
+		position: absolute;
+		bottom: -32px;
+		left: 0;
+		right: 0;
+		z-index: 1;
+    @include mq{
+		border-width: 16px 23px 0;
+		bottom: -16px;
+    }
+	}
+}
+.bg1{
+	background:url(../img/service/bg1.png) center center no-repeat;
+	background-size: 100% 100%;
+	&.contArw{
+		&:after{
+			border-color: #ececeb transparent transparent;
+		}
+	}
+}
+.bg2{
+	background-color: #fff;
+	&.contArw{
+		&:after{
+			border-color: #fff transparent transparent;
+		}
+	}
+}
+
+.ttl1{
+	margin-bottom: 1em;
+	font-size: 4.0rem;
+	text-align: center;
+	span{
+		display: inline-block;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #881b1b;
+	}
+	@include mq{
+		font-size: 2.0rem;
+	}
+}
+
+
+.targetBox{
+	background:url(../img/service/box_sdw.png) center bottom no-repeat;
+	background-size: 100% auto;
+	margin: 0 auto -120px;
+	padding-bottom: percentage(28/897);
+	position: relative;
+	top: -140px;
+	dl{
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		padding: 35px;
+	}
+	dt{
+		margin-right: 30px;
+	}
+	dd{
+		ul{
+			position: relative;
+			&:after{
+				content: "など";
+				font-size: 1.6rem;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+        @include mq{
+          position: static;
+          text-align: right;
+          display: block;
+          font-size: 1rem;
+        }
+			}
+		}
+		li{
+			background:url(../img/service/chk.png) 0 1em no-repeat;
+			padding: 1em 0 1em 30px;
+			font-size: 2.0rem;
+			& + li{
+				border-top: 1px dotted #666;
+			}
+			em{
+				background:linear-gradient(rgba(255,234,0,0) 60%, rgba(255,234,0,1.0) 61%);
+			}
+		}
+	}
+	@include mq{
+		margin: 0;
+		padding-bottom: 10vw;
+    background-image: none;
+		top: 0;
+		dl{
+			display: block;
+			padding: 5%;
+		}
+		dt{
+			text-align: center;
+			margin: 0 auto 3vw auto; 
+      width: 35%;
+		}
+		dd{
+			ul{
+				&:after{
+					bottom: 0;
+					right: 0;
+				}
+			}
+			li{
+				padding: 1em 0 1em 30px;
+				font-size: 1.2rem;
+				& + li{
+					border-top: 1px dotted #666;
+				}
+				em{
+					background:linear-gradient(rgba(255,234,0,0) 60%, rgba(255,234,0,1.0) 61%);
+				}
+			}
+		}
+	}
+}
+
+.howtoBox{
+  @include mq{
+    padding: 0 3vw;
+  }
+	ul{
+	}
+	li{
+		& + li{
+			margin-top: 40px;
+			position: relative;
+			&:before{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				margin: auto;
+				border-bottom: 3px solid #cd6d6d;
+				border-left: 3px solid #cd6d6d;
+				transform: rotate(-45deg);
+				position: absolute;
+				top: -28px;
+				left: 0;
+				right: 0;
+			}
+		}
+		dl{
+			display: flex;
+      @include mq{
+        background: #FFF;
+        display: block;
+        position: relative;
+      }
+		}
+		dt{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+			background-color: #cd6d6d;
+			width: 90px;
+			height: 90px;
+			color: #fff;
+			font-size: 3.4rem;
+      @include mq{
+        display: inline-block;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50px;
+        line-height: 10vw;
+        text-align: center;
+        position: absolute;
+        left: 3vw;
+        top: 5vw;
+        font-size: 1.8rem;
+      }
+		}
+		dd{
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			width: 100%;
+			padding: 1em 2em;
+			font-size: 1.8rem;
+			line-height: (26/18);
+      @include mq{
+        padding: 5vw 5vw 5vw 15vw;
+        box-sizing: border-box;
+        font-size: 1.4rem;
+      }
+		}
+	}
+}
+
+.labels{
+  max-width: 1150px;
+  margin: 0 auto;
+	margin-bottom: 85px;
+  @include mq{
+    margin-bottom: 10vw;
+  }
+	ul{
+		display: flex;
+		justify-content: center;
+    flex-wrap: wrap;
+    @include mq{
+      padding: 0 4vw;
+    }
+    
+	}
+	li{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+    margin: 1%;
+		color: #881b1b;
+		font-size: 18px;
+		text-align: center;
+		line-height: (26/18);
+		border: 1px solid #881b1b;
+		border-radius: 5px;
+		box-sizing: border-box;
+    transition: 0.5s;
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $color1;
+      border-right: 2px solid $color1;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 5%;
+      top: 40%;
+      @include mq{
+        top: 38%;
+      }
+    }
+    &:hover{
+      background: $color1;
+      a{
+        color: #FFF;
+      }
+    }
+    a{
+		  color: #881b1b;
+      display: block;
+      padding: 1em 2em;
+    }
+    @include mq{
+      width: 100%;
+      margin-bottom: 3vw;
+      padding: 1vw;
+      font-size: 1.4rem;
+      br{
+        display: none;
+      }
+    }
+	}
+}
+
+.rateZone{
+	dl{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    @include mq{
+      display: block;
+    }
+	}
+	dt{
+		margin-right: 25px;
+		text-align: center;
+    @include mq{
+      margin: 0px;
+    }
+		em{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 5px;
+			color: #881b1b;
+			font-size: 2.2rem;
+			font-weight: bold;
+      @include mq{
+        margin-bottom: 3vw;
+      }
+			&:before,
+			&:after{
+				content: "";
+				display: inline-block;
+				background:url(../img/service/mark1.png) 0 0 no-repeat;
+				background-size: 100% 100%;
+				width: 18px;
+				height: 26px;
+				margin-right: 0.2em;
+			}
+			&:after{
+				margin: 0 0 0 0.2em;
+				transform: scale(-1, 1);
+			}
+		}
+		p{
+			color: #881b1b;
+      font-weight: bold;
+			font-size: 2.5rem;
+      @include mq{
+        margin-bottom: 3vw;
+      }
+		}
+	}
+	dd{
+		font-size:3.2rem;
+    text-align: center;
+    @include mq{
+      font-size: 2.8rem;
+    }
+    strong{
+      font-size: 5.8rem;
+      color: $color1;
+      @include mq{
+        font-size: 4rem;
+        text-align: center;
+      }
+    }
+		small{
+			display: block;
+			margin-top: 1em;
+			font-size: 12px;
+			text-align: center;
+		}
+	}
+	.txt1{
+		margin: 50px 0;
+    line-height: 1.8;
+    @include mq{
+      margin: 5vw;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+	}
+
+	table{
+		width: 100%;
+		font-size: 1.6rem;
+		text-align: center;
+		border: 1px solid #ccc;
+    @include mq{
+      font-size: 1.2rem;
+      width: 94%;
+      margin: 0 auto;
+    }
+		th{
+			background-color: #e9e9e9;
+			padding: 1em;
+			vertical-align: middle;
+			border: 1px solid #ccc;
+      @include mq{
+        padding: 3vw;
+      }
+			&[rowspan]{
+				background-color: #b24242;
+				color: #fff;
+				font-size: 1.8rem;
+        @include mq{
+          font-size: 1.4rem;
+        }
+			}
+		}
+		td{
+			padding: 1em;
+			vertical-align: middle;
+			border: 1px solid #ccc;
+		}
+	}
+}
+
+.exampleZone{
+	padding-bottom: 10px;
+  @include mq{
+    padding: 4vw;
+  }
+	.interview-list{
+	}
+}
+
+
+.txt1{
+	font-size: 1.6rem;
+	text-align: center;
+  @include mq{
+    font-size: 1.4rem;
+  }
+}
+
+.PT85{
+  padding-top: 85px; 
+  @include mq{
+    padding-top: 10vw;
+  }
+}
+.PB85{
+  padding-bottom: 85px;
+  @include mq{
+    padding-bottom: 10vw;
+  }
+}

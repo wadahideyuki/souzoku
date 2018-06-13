@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "https://fonts.googleapis.com/earlyaccess/notosansjapanese.css";
+@import "https://fonts.googleapis.com/earlyaccess/sawarabimincho.css";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-style: normal; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans Japanese"; }
+
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #222; }
+
+a {
+  color: #222;
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  height: auto; }
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 3.125vw; } }
+
+.title-box {
+  background: url(../img/service/main_bg.png) center center no-repeat;
+  background-size: cover;
+  padding: 0px 0 140px;
+  color: #FFF;
+  line-height: 1.3; }
+  .title-box .title-main span {
+    display: block;
+    line-height: 1; }
+    .title-box .title-main span small {
+      display: inline-block;
+      background-color: #fff;
+      margin-bottom: 1em;
+      padding: 0.5em 1.2em;
+      color: #881b1b;
+      font-size: 0.46em;
+      border-radius: 50px; }
+  @media screen and (max-width: 767px) {
+    .title-box {
+      padding: 3% 3% 10%; }
+      .title-box .title-main {
+        padding: 1.8em 0 0;
+        font-size: 2rem; }
+        .title-box .title-main br {
+          display: none; }
+        .title-box .title-main span small {
+          font-size: 1rem; } }
+
+.inner.W900 {
+  max-width: 900px; }
+
+.contArw {
+  position: relative; }
+  .contArw:after {
+    content: "";
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 32px 46px 0;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    right: 0;
+    z-index: 1; }
+    @media screen and (max-width: 767px) {
+      .contArw:after {
+        border-width: 16px 23px 0;
+        bottom: -16px; } }
+
+.bg1 {
+  background: url(../img/service/bg1.png) center center no-repeat;
+  background-size: 100% 100%; }
+  .bg1.contArw:after {
+    border-color: #ececeb transparent transparent; }
+
+.bg2 {
+  background-color: #fff; }
+  .bg2.contArw:after {
+    border-color: #fff transparent transparent; }
+
+.ttl1 {
+  margin-bottom: 1em;
+  font-size: 4.0rem;
+  text-align: center; }
+  .ttl1 span {
+    display: inline-block;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #881b1b; }
+  @media screen and (max-width: 767px) {
+    .ttl1 {
+      font-size: 2.0rem; } }
+
+.targetBox {
+  background: url(../img/service/box_sdw.png) center bottom no-repeat;
+  background-size: 100% auto;
+  margin: 0 auto -120px;
+  padding-bottom: 3.121516165%;
+  position: relative;
+  top: -140px; }
+  .targetBox dl {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 35px; }
+  .targetBox dt {
+    margin-right: 30px; }
+  .targetBox dd ul {
+    position: relative; }
+    .targetBox dd ul:after {
+      content: "など";
+      font-size: 1.6rem;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+      @media screen and (max-width: 767px) {
+        .targetBox dd ul:after {
+          position: static;
+          text-align: right;
+          display: block;
+          font-size: 1rem; } }
+  .targetBox dd li {
+    background: url(../img/service/chk.png) 0 1em no-repeat;
+    padding: 1em 0 1em 30px;
+    font-size: 2.0rem; }
+    .targetBox dd li + li {
+      border-top: 1px dotted #666; }
+    .targetBox dd li em {
+      background: linear-gradient(rgba(255, 234, 0, 0) 60%, #ffea00 61%); }
+  @media screen and (max-width: 767px) {
+    .targetBox {
+      margin: 0;
+      padding-bottom: 10vw;
+      background-image: none;
+      top: 0; }
+      .targetBox dl {
+        display: block;
+        padding: 5%; }
+      .targetBox dt {
+        text-align: center;
+        margin: 0 auto 3vw auto;
+        width: 35%; }
+      .targetBox dd ul:after {
+        bottom: 0;
+        right: 0; }
+      .targetBox dd li {
+        padding: 1em 0 1em 30px;
+        font-size: 1.2rem; }
+        .targetBox dd li + li {
+          border-top: 1px dotted #666; }
+        .targetBox dd li em {
+          background: linear-gradient(rgba(255, 234, 0, 0) 60%, #ffea00 61%); } }
+
+@media screen and (max-width: 767px) {
+  .howtoBox {
+    padding: 0 3vw; } }
+.howtoBox li + li {
+  margin-top: 40px;
+  position: relative; }
+  .howtoBox li + li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    border-bottom: 3px solid #cd6d6d;
+    border-left: 3px solid #cd6d6d;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -28px;
+    left: 0;
+    right: 0; }
+.howtoBox li dl {
+  display: flex; }
+  @media screen and (max-width: 767px) {
+    .howtoBox li dl {
+      background: #FFF;
+      display: block;
+      position: relative; } }
+.howtoBox li dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #cd6d6d;
+  width: 90px;
+  height: 90px;
+  color: #fff;
+  font-size: 3.4rem; }
+  @media screen and (max-width: 767px) {
+    .howtoBox li dt {
+      display: inline-block;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50px;
+      line-height: 10vw;
+      text-align: center;
+      position: absolute;
+      left: 3vw;
+      top: 5vw;
+      font-size: 1.8rem; } }
+.howtoBox li dd {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  padding: 1em 2em;
+  font-size: 1.8rem;
+  line-height: 1.4444444444; }
+  @media screen and (max-width: 767px) {
+    .howtoBox li dd {
+      padding: 5vw 5vw 5vw 15vw;
+      box-sizing: border-box;
+      font-size: 1.4rem; } }
+
+.labels {
+  max-width: 1150px;
+  margin: 0 auto;
+  margin-bottom: 85px; }
+  @media screen and (max-width: 767px) {
+    .labels {
+      margin-bottom: 10vw; } }
+  .labels ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 767px) {
+      .labels ul {
+        padding: 0 4vw; } }
+  .labels li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 1%;
+    color: #881b1b;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.4444444444;
+    border: 1px solid #881b1b;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    position: relative; }
+    .labels li:after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #881b1b;
+      border-right: 2px solid #881b1b;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 5%;
+      top: 40%; }
+      @media screen and (max-width: 767px) {
+        .labels li:after {
+          top: 38%; } }
+    .labels li:hover {
+      background: #881b1b; }
+      .labels li:hover a {
+        color: #FFF; }
+    .labels li a {
+      color: #881b1b;
+      display: block;
+      padding: 1em 2em; }
+    @media screen and (max-width: 767px) {
+      .labels li {
+        width: 100%;
+        margin-bottom: 3vw;
+        padding: 1vw;
+        font-size: 1.4rem; }
+        .labels li br {
+          display: none; } }
+
+.rateZone dl {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 767px) {
+    .rateZone dl {
+      display: block; } }
+.rateZone dt {
+  margin-right: 25px;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .rateZone dt {
+      margin: 0px; } }
+  .rateZone dt em {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    color: #881b1b;
+    font-size: 2.2rem;
+    font-weight: bold; }
+    @media screen and (max-width: 767px) {
+      .rateZone dt em {
+        margin-bottom: 3vw; } }
+    .rateZone dt em:before, .rateZone dt em:after {
+      content: "";
+      display: inline-block;
+      background: url(../img/service/mark1.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      width: 18px;
+      height: 26px;
+      margin-right: 0.2em; }
+    .rateZone dt em:after {
+      margin: 0 0 0 0.2em;
+      transform: scale(-1, 1); }
+  .rateZone dt p {
+    color: #881b1b;
+    font-weight: bold;
+    font-size: 2.5rem; }
+    @media screen and (max-width: 767px) {
+      .rateZone dt p {
+        margin-bottom: 3vw; } }
+.rateZone dd {
+  font-size: 3.2rem;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .rateZone dd {
+      font-size: 2.8rem; } }
+  .rateZone dd strong {
+    font-size: 5.8rem;
+    color: #881b1b; }
+    @media screen and (max-width: 767px) {
+      .rateZone dd strong {
+        font-size: 4rem;
+        text-align: center; } }
+  .rateZone dd small {
+    display: block;
+    margin-top: 1em;
+    font-size: 12px;
+    text-align: center; }
+.rateZone .txt1 {
+  margin: 50px 0;
+  line-height: 1.8; }
+  @media screen and (max-width: 767px) {
+    .rateZone .txt1 {
+      margin: 5vw;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.2; } }
+.rateZone table {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  border: 1px solid #ccc; }
+  @media screen and (max-width: 767px) {
+    .rateZone table {
+      font-size: 1.2rem;
+      width: 94%;
+      margin: 0 auto; } }
+  .rateZone table th {
+    background-color: #e9e9e9;
+    padding: 1em;
+    vertical-align: middle;
+    border: 1px solid #ccc; }
+    @media screen and (max-width: 767px) {
+      .rateZone table th {
+        padding: 3vw; } }
+    .rateZone table th[rowspan] {
+      background-color: #b24242;
+      color: #fff;
+      font-size: 1.8rem; }
+      @media screen and (max-width: 767px) {
+        .rateZone table th[rowspan] {
+          font-size: 1.4rem; } }
+  .rateZone table td {
+    padding: 1em;
+    vertical-align: middle;
+    border: 1px solid #ccc; }
+
+.exampleZone {
+  padding-bottom: 10px; }
+  @media screen and (max-width: 767px) {
+    .exampleZone {
+      padding: 4vw; } }
+
+.txt1 {
+  font-size: 1.6rem;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .txt1 {
+      font-size: 1.4rem; } }
+
+.PT85 {
+  padding-top: 85px; }
+  @media screen and (max-width: 767px) {
+    .PT85 {
+      padding-top: 10vw; } }
+
+.PB85 {
+  padding-bottom: 85px; }
+  @media screen and (max-width: 767px) {
+    .PB85 {
+      padding-bottom: 10vw; } }

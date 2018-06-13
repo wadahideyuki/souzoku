@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.contact .foot-contact {
+  display: none; }
+
+.catForm {
+  background: url(../img/bg3.jpg) repeat; }
+  .catForm .title-box {
+    background: #881b1b;
+    color: #FFF;
+    position: relative; }
+    .catForm .title-box:after {
+      content: "";
+      background: url(../img/bg2.png);
+      height: 30px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: -29px; }
+  .catForm .content {
+    padding: 80px 0; }
+    .catForm .content .btn {
+      margin: 0 0.5em; }
+  .catForm table {
+    color: #333; }
+  @media screen and (max-width: 767px) {
+    .catForm .content .btn {
+      margin: 0;
+      width: 100%; }
+      .catForm .content .btn + .btn {
+        margin-top: 3%; } }
+
+/* トップ */
+/* 確認 */
+.catForm.pageMailConf {
+  padding: 50px 0; }
+  .catForm.pageMailConf .formConfBox {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
+    font-size: 1.6em; }
+
+/* 完了 */
+.catForm.pageMailComp {
+  padding: 50px 0; }
+  .catForm.pageMailComp .formCompBox {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
+    font-size: 1.6em; }
+    .catForm.pageMailComp .formCompBox strong {
+      display: block;
+      margin-bottom: 0.3em;
+      font-size: 1.2em;
+      font-weight: bold; }
+    .catForm.pageMailComp .formCompBox p {
+      margin-bottom: 1.5em; }
