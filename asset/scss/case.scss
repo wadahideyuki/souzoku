@@ -41,6 +41,30 @@
         background: #FFF;
         transition: 0.3s;
         position: relative;
+          &.coming{
+              cursor: default;
+              opacity: 0.5;
+              &:hover{
+                  box-shadow: 5px 5px 20px rgba(0,0,0,0); 
+                  background: #FFF;
+              }
+              &:after{
+                  display: none;
+              }
+              &:before{
+                  content: "作成中";
+                  white-space: pre;
+                  text-align: center;
+                  display: inline-block;
+                  position: absolute;
+                  top: 40%;
+                  right:3%;
+                  font-size: 2rem;
+                  @include mq{
+                      font-size: 1.2rem;
+                  }
+              }
+          }
         @include mq{
           padding: 4vw;
         }
@@ -60,11 +84,11 @@
             display: block;
           }
           dt{
-            width: 10%;
+            width: 9%;
             color: #c38d8d;
             border-right: 1px solid #c38d8d;
-            margin-right: 3%;
-            font-size: 2.4rem;
+            margin-right: 2%;
+            font-size: 2.3rem;
             @include mq{
               width:auto;
               border: none;
@@ -80,7 +104,7 @@
           }
           dd{
             width: 87%;
-            font-size: 2rem;
+            font-size: 1.9rem;
             @include mq{
               font-size: 1.6rem;
             }

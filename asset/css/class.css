@@ -1,139 +1,210 @@
 .pc {
-  display: inline-block; }
-  @media screen and (max-width: 767px) {
-    .pc {
-      display: none; } }
-
-.sp {
-  display: none; }
-  @media screen and (max-width: 767px) {
-    .sp {
-      display: inline-block; } }
-
-/*-- font-size --*/
-.fwB {
-  font-weight: bold !important; }
-.fwN {
-  font-weight: normal !important; }
-
-/*-- Etc --*/
-.disI {
-  display: inline !important; }
-.disB {
-  display: block !important; }
-.disIB {
-  display: inline-block !important; }
-.disT {
-  display: table !important; }
-.disTC {
-  display: table-cell !important; }
-.disN {
-  display: none !important; }
-.disF {
-  display: flex !important; }
-
-.taL {
-  text-align: left !important; }
-.taR {
-  text-align: right !important; }
-.taC {
-  text-align: center !important; }
-
-.vaT {
-  vertical-align: top !important; }
-.vaM {
-  vertical-align: middle !important; }
-.vaB {
-  vertical-align: bottom !important; }
-.vaTB {
-  vertical-align: text-bottom !important; }
-
-.fltL {
-  float: left !important; }
-.fltR {
-  float: right !important; }
-.fltN {
-  float: none !important; }
-
-.posS {
-  position: static !important; }
-.posR {
-  position: relative !important; }
-.posA {
-  position: absolute !important; }
-.posF {
-  position: fixed !important; }
-
-.brWord {
-  word-wrap: break-word; }
-
-.waNw {
-  white-space: nowrap; }
-
-.printDown {
-  display: none; }
-
-.printBreak {
-  display: none; }
+  display: inline-block;
+}
 
 @media screen and (max-width: 767px) {
   .pc {
-    display: none !important; }
+    display: none;
+  }
+}
 
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp {
+    display: inline-block;
+  }
+}
+
+/*-- font-size --*/
+.fwB {
+  font-weight: bold !important;
+}
+
+.fwN {
+  font-weight: normal !important;
+}
+
+/*-- Etc --*/
+.disI {
+  display: inline !important;
+}
+
+.disB {
+  display: block !important;
+}
+
+.disIB {
+  display: inline-block !important;
+}
+
+.disT {
+  display: table !important;
+}
+
+.disTC {
+  display: table-cell !important;
+}
+
+.disN {
+  display: none !important;
+}
+
+.disF {
+  display: flex !important;
+}
+
+.taL {
+  text-align: left !important;
+}
+
+.taR {
+  text-align: right !important;
+}
+
+.taC {
+  text-align: center !important;
+}
+
+.vaT {
+  vertical-align: top !important;
+}
+
+.vaM {
+  vertical-align: middle !important;
+}
+
+.vaB {
+  vertical-align: bottom !important;
+}
+
+.vaTB {
+  vertical-align: text-bottom !important;
+}
+
+.fltL {
+  float: left !important;
+}
+
+.fltR {
+  float: right !important;
+}
+
+.fltN {
+  float: none !important;
+}
+
+.posS {
+  position: static !important;
+}
+
+.posR {
+  position: relative !important;
+}
+
+.posA {
+  position: absolute !important;
+}
+
+.posF {
+  position: fixed !important;
+}
+
+.brWord {
+  word-wrap: break-word;
+}
+
+.waNw {
+  white-space: nowrap;
+}
+
+.printDown {
+  display: none;
+}
+
+.printBreak {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
   /*-- Width --*/
   .spWAuto {
-    width: auto !important; }
-
+    width: auto !important;
+  }
   /*-- font-size --*/
   .spFwB {
-    font-weight: bold !important; }
+    font-weight: bold !important;
+  }
   .spFwN {
-    font-weight: normal !important; }
-
+    font-weight: normal !important;
+  }
   /*-- Etc --*/
   .spDisI {
-    display: inline !important; }
+    display: inline !important;
+  }
   .spDisB {
-    display: block !important; }
+    display: block !important;
+  }
   .spDisIB {
-    display: inline-block !important; }
+    display: inline-block !important;
+  }
   .spDisT {
-    display: table !important; }
+    display: table !important;
+  }
   .spDisTC {
-    display: table-cell !important; }
+    display: table-cell !important;
+  }
   .spDisN {
-    display: none !important; }
+    display: none !important;
+  }
   .spDisF {
-    display: flex !important; }
-
+    display: flex !important;
+  }
   .spTaL {
-    text-align: left !important; }
+    text-align: left !important;
+  }
   .spTaR {
-    text-align: right !important; }
+    text-align: right !important;
+  }
   .spTaC {
-    text-align: center !important; }
-
+    text-align: center !important;
+  }
   .spVaT {
-    vertical-align: top !important; }
+    vertical-align: top !important;
+  }
   .spVaM {
-    vertical-align: middle !important; }
+    vertical-align: middle !important;
+  }
   .spVaB {
-    vertical-align: bottom !important; }
+    vertical-align: bottom !important;
+  }
   .spVaTB {
-    vertical-align: text-bottom !important; }
-
+    vertical-align: text-bottom !important;
+  }
   .spFltL {
-    float: left !important; }
+    float: left !important;
+  }
   .spFltR {
-    float: right !important; }
+    float: right !important;
+  }
   .spFltN {
-    float: none !important; }
-
+    float: none !important;
+  }
   .spPosS {
-    position: static !important; }
+    position: static !important;
+  }
   .spPosR {
-    position: relative !important; }
+    position: relative !important;
+  }
   .spPosA {
-    position: absolute !important; }
+    position: absolute !important;
+  }
   .spPosF {
-    position: fixed !important; } }
+    position: fixed !important;
+  }
+}

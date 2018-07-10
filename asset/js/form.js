@@ -3,6 +3,8 @@ $(function(){
 var validation = $("#validForm").exValidation({
 	rules: {
 		name: "chkrequired",
+		name2: "chkrequired",
+		tel: "chkrequired",
 		name_: "laterCall",
 		kana: "chkrequired chkkatakana",
 		kana_: "laterCall",
