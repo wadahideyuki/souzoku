@@ -603,3 +603,19 @@ footer{
     padding-bottom: 20vw;
   }
 }
+/*--------------------------------------
+ リスト
+---------------------------------------*/
+.labels {
+    .swich {
+        .hide{
+            display: none;
+        }
+        .hide.nohide{
+            display: block;
+        }
+    }
+}
+li{
+    list-style: none;
+}

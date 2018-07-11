@@ -258,27 +258,58 @@ html{
 }
 
 .labels{
-  max-width: 1150px;
+  max-width: 800px;
   margin: 0 auto;
 	margin-bottom: 85px;
   @include mq{
     margin-bottom: 10vw;
   }
+    dl {
+        .swich {
+            cursor: pointer;
+            color: #fff;
+            background: #881b1b;
+            .hide {
+                li {
+                    background: #fff;
+                }
+            }
+            
+        }
+        .swich:hover {
+            opacity: 0.8;
+        }
+            .swich:after{
+                 content: "";
+                 display: block;
+                 width: 10px;
+                 height: 10px;
+                 border-top: 2px solid #fff;
+                 border-right: 2px solid #fff;
+                 transform: rotate(135deg);
+                 position: absolute;
+                 right: 5%;
+                 top: 0.7em;
+                 @include mq{
+                 top: 38%;
+      }
+                
+    }
+    }
+    .swich.on:after{
+                 transform: rotate(315deg);
+                 
+      }
 	ul{
-		display: flex;
-		justify-content: center;
-    flex-wrap: wrap;
+        
     @include mq{
       padding: 0 4vw;
     }
     
 	}
 	li{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 30%;
-    margin: 1%;
+        margin: 2.5%;
+        padding: 1%;
 		color: #881b1b;
 		font-size: 18px;
 		text-align: center;
@@ -288,32 +319,11 @@ html{
 		box-sizing: border-box;
     transition: 0.5s;
     position: relative;
-    &:after{
-      content: "";
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-top: 2px solid $color1;
-      border-right: 2px solid $color1;
-      transform: rotate(45deg);
-      position: absolute;
-      right: 5%;
-      top: 40%;
-      @include mq{
-        top: 38%;
-      }
-    }
-    &:hover{
-      background: $color1;
-      a{
-        color: #FFF;
-      }
-    }
-    a{
-		  color: #881b1b;
-      display: block;
-      padding: 1em 2em;
-    }
+
+        p{
+            text-align: left;
+            padding: 1em;
+        }
     @include mq{
       width: 100%;
       margin-bottom: 3vw;

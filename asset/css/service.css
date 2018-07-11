@@ -352,7 +352,7 @@ img {
 }
 
 .labels {
-  max-width: 1150px;
+  max-width: 800px;
   margin: 0 auto;
   margin-bottom: 85px;
 }
@@ -363,10 +363,41 @@ img {
   }
 }
 
-.labels ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.labels dl .swich {
+  cursor: pointer;
+  color: #fff;
+  background: #881b1b;
+}
+
+.labels dl .swich .hide li {
+  background: #fff;
+}
+
+.labels dl .swich:hover {
+  opacity: 0.8;
+}
+
+.labels dl .swich:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 5%;
+  top: 0.7em;
+}
+
+@media screen and (max-width: 767px) {
+  .labels dl .swich:after {
+    top: 38%;
+  }
+}
+
+.labels .swich.on:after {
+  transform: rotate(315deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -376,11 +407,8 @@ img {
 }
 
 .labels li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  margin: 1%;
+  margin: 2.5%;
+  padding: 1%;
   color: #881b1b;
   font-size: 18px;
   text-align: center;
@@ -392,37 +420,9 @@ img {
   position: relative;
 }
 
-.labels li:after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #881b1b;
-  border-right: 2px solid #881b1b;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 5%;
-  top: 40%;
-}
-
-@media screen and (max-width: 767px) {
-  .labels li:after {
-    top: 38%;
-  }
-}
-
-.labels li:hover {
-  background: #881b1b;
-}
-
-.labels li:hover a {
-  color: #FFF;
-}
-
-.labels li a {
-  color: #881b1b;
-  display: block;
-  padding: 1em 2em;
+.labels li p {
+  text-align: left;
+  padding: 1em;
 }
 
 @media screen and (max-width: 767px) {
