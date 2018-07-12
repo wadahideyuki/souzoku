@@ -243,24 +243,18 @@ nav{
         z-index: 9999;
         li{
           width: 100%;
-          a{
+          span{
+            opacity: 0.3;
+          }
+          a,span{
             text-align: left;
             color: #FFF;
             padding: 1em;
             width: 100%;
             border-bottom: 1px dotted rgba(255,255,255,0.1);
             box-sizing: border-box;
+            line-height: 1.4;
             transition: 0.5s;
-            &:before{
-              content: "";
-              display: inline-block;
-              width: 0.5em;
-              height: 0.5em;
-              border-top: 1px solid #FFF;
-              border-right: 1px solid #FFF;
-              transform: rotate(45deg);
-              margin-right: 0.5em;
-            }
             &:hover{
               background: rgba(0,0,0,1);
             }
