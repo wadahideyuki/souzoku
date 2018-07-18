@@ -291,8 +291,23 @@
           }
         }
       }
-    }
+      .attention-block {
+        margin: 2rem 0;
+        .text-attention {
+          line-height: 1.2;
+        }
+      }
+      .attention-block {
+        font-size: 1.2rem;
+        margin-top: 10%;
+        .text-attention{
+          line-height: 1.8;
+        }
+      }
+        }
   }
+    }
+
   .btn-service{
     border: 1px solid $color1;
     padding: 15px;
@@ -336,5 +351,5 @@
         font-size: 1.8rem;
       }
     }
+    
   }
-}
