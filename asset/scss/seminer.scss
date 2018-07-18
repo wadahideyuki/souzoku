@@ -1,0 +1,170 @@
+@import "reset";
+@import "var";
+@import "mq";
+@import "_animation";
+.content{
+  background: url(../img/bg3.jpg) repeat;
+  padding-bottom: 50px;
+  .inner{
+  text-align: center;
+    padding-top: 30px;
+  }
+}
+
+  .foot-contact{
+    display: none;
+  }
+.pankz{
+    color: #333 ;
+    @include mq{
+      padding: 4vw;
+    }
+  li{
+    a{
+       color: #333;
+    }
+  }
+  }
+  .taR{
+    font-size: 1.2rem;
+  }
+  .title-box{
+    background: $color1;
+    color: #FFF;
+    position: relative;
+    
+  }
+.seminer-box{
+  @include mq{
+    padding: 0 10px;
+  }
+  
+}
+.entry-content{
+    max-width: 910px;
+    padding: 30px 0px;
+  text-align: left;
+  margin: 0 auto;
+  h2{
+    background: $color2;
+    color: #FFF;
+    padding: 0.5em;
+    font-size: 2.4rem;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  table{
+    width: 100%;
+    margin-top: 24px;
+    th{
+      background: $color2;
+      color: #FFF;
+      border: 1px solid #CCC;
+      padding: 16px;
+      line-height: 1.8;
+      width: 20%;
+    }
+    td{
+      line-height: 1.8;
+      padding: 16px;
+      border: 1px solid #CCC;
+      background: #FFF;
+      
+    }
+  }
+  p{
+    padding-bottom: 0.5em;
+    line-height: 1.8;
+    
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    @include mq{
+      width: 100%;
+    }
+  }
+  b{
+    font-weight: bold;
+  }
+  ul{
+    li{
+      list-style: disc;
+      margin-left: 1.5em;
+    }
+  }
+  ol{
+    li{
+      list-style: decimal;
+      margin-left: 1.5em;
+    }
+  }
+}
+.btnWrap{
+  padding-top: 15px;
+  input{
+    padding: 1em 3em;
+  }
+}
+.semTbl{
+  max-width: 800px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 30px;
+  width: 100%;
+  @include mq{
+    padding: 10px;
+  }
+  table{
+    width: 100%;
+  }
+  p{
+  }
+  th{
+    padding: 16px;
+    vertical-align: top;
+    border-bottom: 1px dotted #CCC;
+    @include mq{
+      text-align: left;
+      display: block;
+      border-bottom: 0px;
+      padding: 10px 8px 5px 8px;
+    }
+  }
+  td{
+    padding: 16px;
+    border-bottom: 1px dotted #CCC;
+    text-align: left;
+    @include mq{
+      display: block;
+      padding: 0px 8px 10px 8px;
+      input,textarea{
+        max-width: 100%;
+      }
+    }
+  }
+}
+header .contact-box{
+  @include mq{
+    
+  display: none;
+  }
+}
+.formConfBox{
+  strong{
+    display: block;
+    padding: 1em 0;
+    text-align: center;
+  }
+  h3{
+      padding: 1em;
+      font-weight: bold;
+      font-size: 1.8;
+    }
+    p{
+      padding: 1em;
+    }
+}
