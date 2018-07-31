@@ -36,7 +36,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 $site_top = "/";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
-$to = "masuzawa@wadakoubou.com,wadahideyuki@gmail.com";
+$to = "wada@wadakoubou.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
 $Email = "Email";
@@ -67,7 +67,7 @@ $userMail = 1;
 $BccMail = "";
 
 // 管理者宛に送信されるメールのタイトル（件名）
-$subject = "ホームページのお問い合わせ";
+$subject = "ホームページからのお問い合わせ";
 
 // 送信確認画面の表示(する=1, しない=0)
 $confirmDsp = 1;
@@ -75,10 +75,10 @@ $confirmDsp = 1;
 // 送信完了後に自動的に指定のページ(サンクスページなど)に移動する(する=1, しない=0)
 // CV率を解析したい場合などはサンクスページを別途用意し、URLをこの下の項目で指定してください。
 // 0にすると、デフォルトの送信完了画面が表示されます。
-$jumpPage = 0;
+$jumpPage = 1;
 
 // 送信完了後に表示するページURL（上記で1を設定した場合のみ）※httpから始まるURLで指定ください。
-$thanksPage = "http://xxx.xxxxxxxxx/thanks.html";
+$thanksPage = "http://sozoku-kaiketsu.jp/contact/thanks.html";
 
 // 必須入力項目を設定する(する=1, しない=0)
 $requireCheck = 1;
@@ -98,10 +98,10 @@ $require = array('お名前','Email','お問い合わせ内容');
 $remail = 1;
 
 //自動返信メールの送信者欄に表示される名前　※あなたの名前や会社名など（もし自動返信メールの送信者名が文字化けする場合ここは空にしてください）
-$refrom_name = "cloverのフォームから";
+$refrom_name = "不動産相続解決センター";
 
 // 差出人に送信確認メールを送る場合のメールのタイトル（上記で1を設定した場合のみ）
-$re_subject = "送信ありがとうございました";
+$re_subject = "お問い合わせありがとうございました";
 
 //フォーム側の「名前」箇所のname属性の値　※自動返信メールの「○○様」の表示で使用します。
 //指定しない、または存在しない場合は、○○様と表示されないだけです。あえて無効にしてもOK
@@ -216,31 +216,47 @@ else if($confirmDsp == 1){
 
 /*　▼▼▼送信確認画面のレイアウト※編集可　オリジナルのデザインも適用可能▼▼▼　*/
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>確認画面 | お問い合わせ | CLOVER</title>
-<link rel="stylesheet" type="text/css" href="../common/css/style.css">
-<link rel="stylesheet" type="text/css" href="../common/css/class.css">
-<style type="text/css">
-/* 自由に編集下さい */
-</style>
-</head>
-<body>
-<div class="wrapper catForm pageMailConf">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123176457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<section class="">
-	<div class="inner">
-		<h2 class="ttl2">
-			<div>
-				<span>お問い合わせ</span>
-				<small>Contact</small>
-			</div>
-		</h2>
-	</div>
-</section>
+  gtag('config', 'UA-123176457-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ | 不動産相続解決センター</title>
+<meta name="description" content="不動産相続のお悩みに最適な解決方法をご提案します。最適な相続の答えは、ひとつではありません。私たちはお客様一人一人のおかれた状況と課題をしっかりと把握し、わかりやすいご説明やシミュレーションを通じて、最適な相続の問題解決をサポートします。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="お問い合わせ" />
+<meta property="og:image" content="/img/icon.png" />
+<meta property="og:url" content="http://example.net/" />
+<meta property="og:site_name" content="不動産相続解決センター" />
+<meta property="og:description" content="不動産相続のお悩みに最適な解決方法をご提案します。最適な相続の答えは、ひとつではありません。私たちはお客様一人一人のおかれた状況と課題をしっかりと把握し、わかりやすいご説明やシミュレーションを通じて、最適な相続の問題解決をサポートします。" />
+<meta name="robots" content="noarchive">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../asset/css/common.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/class.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/form.css">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../asset/css/exvalidation.css">
+</head>
+<body class="">
+<div class="wrapper catForm pageTop">
+<div class="title-box">
+<div class="inner">
+<h1 class="title-main">お問い合わせ内容確認</h1>
+</div>
+</div>
+<section class="content bgGrey1">
+<div class="contact-txt">
+   
 
 
 <!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
@@ -253,17 +269,16 @@ else if($confirmDsp == 1){
 <?php echo $errm; ?><br /><br /><input class="btn clr3 sz3" type="button" value=" 前画面に戻る " onClick="history.back()">
 </div>
 <?php }else{ ?>
-<h3 class="ttl1">確認画面</h3>
 <p align="center" class="spFz15">以下の内容で間違いがなければ、<br />「送信する」ボタンを押してください。</p>
 <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
-<div class="tblBox1 noBd">
+<div class="tblBox1 ">
 <table>
 <?php echo confirmOutput($_POST);//入力内容を表示?>
 </table>
 <p align="center" class="btnWrap"><input type="hidden" name="mail_set" value="confirm_submit">
 <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']);?>">
 <input class="btn clr2 sz3" type="submit" value="　送信する　">
-<input class="btn clr3 sz3" type="button" value="前画面に戻る" onClick="history.back()"></p>
+<input class="btn clr3 sz3" type="button" value="＜ 前画面に戻る " onClick="history.back()"></p>
 </div>
 </form>
 <?php } ?>
@@ -285,35 +300,54 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 
 /* ▼▼▼送信完了画面のレイアウト　編集可 ※送信完了後に指定のページに移動しない場合のみ表示▼▼▼　*/
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>完了画面 | お問い合わせ | CLOVER</title>
-<link rel="stylesheet" type="text/css" href="../common/css/style.css">
-<link rel="stylesheet" type="text/css" href="../common/css/class.css">
-</head>
-<body>
-<div class="wrapper catForm pageMailComp">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123176457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<section class="">
-	<div class="inner">
-		<h2 class="ttl2">
-			<div>
-				<span>お問い合わせ</span>
-				<small>Contact</small>
-			</div>
-		</h2>
-	</div>
-</section>
+  gtag('config', 'UA-123176457-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ | 不動産相続解決センター</title>
+<meta name="description" content="不動産相続のお悩みに最適な解決方法をご提案します。最適な相続の答えは、ひとつではありません。私たちはお客様一人一人のおかれた状況と課題をしっかりと把握し、わかりやすいご説明やシミュレーションを通じて、最適な相続の問題解決をサポートします。" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="お問い合わせ" />
+<meta property="og:image" content="/img/icon.png" />
+<meta property="og:url" content="http://example.net/" />
+<meta property="og:site_name" content="不動産相続解決センター" />
+<meta property="og:description" content="不動産相続のお悩みに最適な解決方法をご提案します。最適な相続の答えは、ひとつではありません。私たちはお客様一人一人のおかれた状況と課題をしっかりと把握し、わかりやすいご説明やシミュレーションを通じて、最適な相続の問題解決をサポートします。" />
+<meta name="robots" content="noarchive">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../asset/css/common.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/class.css">
+<link rel="stylesheet" type="text/css" href="../asset/css/form.css">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../asset/css/exvalidation.css">
+</head>
+<body class="">
+  
+<div class="wrapper catForm pageTop">
+<div class="title-box">
+<div class="inner">
+<h1 class="title-main">お問い合わせ完了</h1>
+</div>
+</div>
+<section class="content bgGrey1">
+<div class="contact-txt">
 
 
 <div align="center">
 <?php if($empty_flag == 1){ ?>
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
 <div style="color:red"><?php echo $errm; ?></div>
-<br /><br /><input class="btn clr3 sz3" type="button" value=" 前画面に戻る " onClick="history.back()">
+<br /><br /><input class="btn clr3 sz3" type="button" value=" ＜ 前画面に戻る  " onClick="history.back()">
 </div>
 
 </div><!--/.wrapper-->
@@ -322,7 +356,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <?php }else{ ?>
 <div class="formCompBox">
 <strong>送信ありがとうございました。</strong>
-<p>送信は正常に完了しました。</p>
+<p>送信は正常に完了しました。</p><br><br><br>
 <a class="btn clr2 sz3" href="<?php echo $site_top ;?>">トップページへ戻る</a>
 </div>
 </div>
@@ -340,7 +374,7 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 //確認画面無しの場合の表示、指定のページに移動する設定の場合、エラーチェックで問題が無ければ指定ページヘリダイレクト
 else if(($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) { 
 	if($empty_flag == 1){ ?>
-<div align="center"><h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4><div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()"></div>
+<div align="center"><h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4><div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" ＜ 前画面に戻る " onClick="history.back()"></div>
 <?php 
 	}else{ header("Location: ".$thanksPage); }
 }
@@ -584,7 +618,7 @@ function refererCheck($Referer_check,$Referer_check_domain){
 	}
 }
 function copyright(){
-	echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="http://www.php-factory.net/" target="_blank">- PHP工房 -</a>';
+	echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="http://www.php-factory.net/" target="_blank"></a>';
 }
 //----------------------------------------------------------------------
 //  関数定義(END)

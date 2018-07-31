@@ -36,7 +36,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 $site_top = "/";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
-$to = "masuzawa@wadakoubou.com,wadahideyuki@gmail.com";
+$to = "wada@wadakoubou.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
 $Email = "Email";
@@ -75,10 +75,10 @@ $confirmDsp = 1;
 // 送信完了後に自動的に指定のページ(サンクスページなど)に移動する(する=1, しない=0)
 // CV率を解析したい場合などはサンクスページを別途用意し、URLをこの下の項目で指定してください。
 // 0にすると、デフォルトの送信完了画面が表示されます。
-$jumpPage = 0;
+$jumpPage = 1;
 
 // 送信完了後に表示するページURL（上記で1を設定した場合のみ）※httpから始まるURLで指定ください。
-$thanksPage = "http://xxx.xxxxxxxxx/thanks.html";
+$thanksPage = "//sozoku-kaiketsu.jp/seminer/thanks.html";
 
 // 必須入力項目を設定する(する=1, しない=0)
 $requireCheck = 1;
@@ -98,10 +98,10 @@ $require = array('お名前','Email');
 $remail = 1;
 
 //自動返信メールの送信者欄に表示される名前　※あなたの名前や会社名など（もし自動返信メールの送信者名が文字化けする場合ここは空にしてください）
-$refrom_name = "セミナー申し込み";
+$refrom_name = "不動産相続解決センター";
 
 // 差出人に送信確認メールを送る場合のメールのタイトル（上記で1を設定した場合のみ）
-$re_subject = "セミナー申し込み確認";
+$re_subject = "【セミナー申し込み】ありがとうございました。";
 
 //フォーム側の「名前」箇所のname属性の値　※自動返信メールの「○○様」の表示で使用します。
 //指定しない、または存在しない場合は、○○様と表示されないだけです。あえて無効にしてもOK
@@ -110,8 +110,7 @@ $dsp_name = 'お名前';
 //自動返信メールの冒頭の文言 ※日本語部分のみ変更可
 $remail_text = <<< TEXT
 
-お問い合わせありがとうございました。
-早急にご返信致しますので今しばらくお待ちください。
+お申し込みありがとうございました。
 
 送信内容は以下になります。
 
@@ -219,6 +218,15 @@ else if($confirmDsp == 1){
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123176457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123176457-1');
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>確認画面 | セミナー申し込み</title>
@@ -235,14 +243,9 @@ else if($confirmDsp == 1){
 </style>
 </head>
 <body>
-  <?php include('../asset/inc/header.html');?>
 <div class="wrapper catForm pageMailConf">
 
 <div class="content">
-  <ul class="pankz">
-    <li><a href="/">トップ</a></li>
-    <li>セミナー情報</li>
-  </ul>
   <div class="inner">
   <h2 class="title1"><span>セミナー情報</span></h2>
     <div class="seminer-box">
@@ -253,15 +256,15 @@ else if($confirmDsp == 1){
 <!-- ▼************ 送信内容表示部　※編集は自己責任で ************ ▼-->
 <div class="formConfBox">
 <?php if($empty_flag == 1){ ?>
-<div align="center">
+<div align="center"><br /><br />
 <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
 <?php echo $errm; ?><br /><br /><input class="btn clr3 sz3" type="button" value=" 前画面に戻る " onClick="history.back()">
 </div>
 <?php }else{ ?>
-<h3 class="ttl1">確認画面</h3>
-<p align="center" class="spFz15">以下の内容で間違いがなければ、<br />「送信する」ボタンを押してください。</p>
+<h3 class="ttl1">確認画面</h3><br />
+<p align="center" class="spFz15">以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p><br />
 <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
-<div class="tblBox1 noBd">
+<div class="tblBox1">
 <table>
 <?php echo confirmOutput($_POST);//入力内容を表示?>
 </table>
@@ -293,6 +296,15 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123176457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123176457-1');
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>確認画面 | セミナー申し込み</title>
@@ -309,7 +321,6 @@ if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &&
 </style>
 </head>
 <body>
-  <?php include('../asset/inc/header.html');?>
 <div class="wrapper catForm pageMailConf">
 
 <div class="content">

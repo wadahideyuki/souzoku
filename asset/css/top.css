@@ -105,6 +105,8 @@ img {
           transform: scale(1); }
         .mainimage ul li.show a {
           opacity: 1; }
+          .mainimage ul li.show a:hover {
+            opacity: 0.8; }
       .mainimage ul li p {
         padding-left: 130px;
         font-size: 2.4rem;
@@ -234,6 +236,8 @@ img {
     border: 1px solid #FFF;
     color: #FFF;
     font-size: 2.3rem; }
+    .lead-block a:hover {
+      background: rgba(255, 255, 255, 0.2); }
     @media screen and (max-width: 767px) {
       .lead-block a {
         width: 96%;
@@ -289,9 +293,14 @@ img {
         .service-block ul li {
           width: 48%;
           margin-bottom: 5vw; } }
+      .service-block ul li a {
+        display: block; }
+        .service-block ul li a:hover img {
+          transform: scale(1.1); }
       .service-block ul li img {
         max-width: 100%;
         display: block;
+        transition: 0.3s;
         margin: 0 auto; }
       .service-block ul li h3 {
         color: #881b1b;

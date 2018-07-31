@@ -2628,14 +2628,17 @@ img {
         padding: 0.5em 1em; } }
   .page-case-detail .title-box h1 strong {
     display: block;
-    padding: 0.5em 0; }
+    padding: 0.5em 0;
+    line-height: 1.4; }
   .page-case-detail .title-box h1 em {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #881b1b; }
 .page-case-detail p {
   text-align: left;
   line-height: 1.8;
   padding-bottom: 1em; }
+  .page-case-detail p.text-attention {
+    padding-bottom: 0.2em; }
 .page-case-detail .intro-block {
   color: #FFF;
   text-align: center;
@@ -2697,6 +2700,7 @@ img {
         margin: 10vw 0; } }
     .page-case-detail .interview-block .interview-inner h3 {
       font-size: 3rem;
+      line-height: 1.4;
       color: #FFF;
       background: #881b1b;
       padding: 0.5em;
@@ -2764,7 +2768,10 @@ img {
         line-height: 1.2; }
     .page-case-detail .interview-block .interview-inner .attention-block {
       font-size: 1.2rem;
-      margin-top: 10%; }
+      margin-top: 20px; }
+      @media screen and (max-width: 767px) {
+        .page-case-detail .interview-block .interview-inner .attention-block {
+          margin-top: 10px; } }
       .page-case-detail .interview-block .interview-inner .attention-block .text-attention {
         line-height: 1.8; }
 

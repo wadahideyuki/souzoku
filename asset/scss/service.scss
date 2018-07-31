@@ -311,7 +311,7 @@ html{
         margin: 2.5%;
         padding:2% 1%;
     box-sizing: border-box;
-		color: #881b1b;
+		color: #333;
 		font-size: 18px;
 		text-align: center;
 		line-height: (26/18);
@@ -320,10 +320,21 @@ html{
 		box-sizing: border-box;
     transition: 0.5s;
     position: relative;
+    strong{
+      font-weight: bold;
+      color: #881b1b;
+    }
+    small{
+      font-size: 1.4rem;
+      display: block;
+    }
 
         p{
             text-align: left;
             padding: 1em;
+          &.price{
+            padding-bottom: 0px;
+          }
         }
     @include mq{
       width: auto;

@@ -2583,6 +2583,7 @@ img {
     padding: 1em 3em; }
 
 .semTbl {
+  box-sizing: border-box;
   max-width: 800px;
   border-radius: 8px;
   border: 1px solid #CCC;
@@ -2596,6 +2597,13 @@ img {
       padding: 10px; } }
   .semTbl table {
     width: 100%; }
+  .semTbl p.txRed {
+    display: inline-block; }
+  .semTbl input[type="text"],
+  .semTbl textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; }
   .semTbl th {
     padding: 16px;
     vertical-align: top;
@@ -2615,7 +2623,11 @@ img {
         display: block;
         padding: 0px 8px 10px 8px; }
         .semTbl td input, .semTbl td textarea {
-          max-width: 100%; } }
+          width: 100%;
+          box-sizing: border-box; } }
+
+.tblBox1 td {
+  text-align: left; }
 
 @media screen and (max-width: 767px) {
   header .contact-box {

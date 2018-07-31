@@ -299,7 +299,7 @@ img {
     margin: 2.5%;
     padding: 2% 1%;
     box-sizing: border-box;
-    color: #881b1b;
+    color: #333;
     font-size: 18px;
     text-align: center;
     line-height: 1.4444444444;
@@ -308,9 +308,17 @@ img {
     box-sizing: border-box;
     transition: 0.5s;
     position: relative; }
+    .labels li strong {
+      font-weight: bold;
+      color: #881b1b; }
+    .labels li small {
+      font-size: 1.4rem;
+      display: block; }
     .labels li p {
       text-align: left;
       padding: 1em; }
+      .labels li p.price {
+        padding-bottom: 0px; }
     @media screen and (max-width: 767px) {
       .labels li {
         width: auto;

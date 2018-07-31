@@ -51,7 +51,7 @@
 .catForm.pageMailConf{
 	padding: 50px 0;
 	.formConfBox{
-		max-width: 800px;
+		max-width: 700px;
 		margin: auto;
 		padding: 0 15px;
 		font-size: 1.6em;
@@ -61,7 +61,7 @@
 .catForm.pageMailComp{
 	padding: 50px 0;
 	.formCompBox{
-		max-width: 800px;
+		max-width: 700px;
 		margin: auto;
 		padding: 0 15px;
 		font-size: 1.6em;
@@ -76,4 +76,44 @@
 		}
 	}
 }
-
+.tblBox1{
+  max-width: 800px;
+  margin-top: 30px;
+}
+.contact-txt{
+  @include mq{
+    padding: 0 15px;
+  }
+  h2{
+    text-align: center;
+    font-size: 4.2rem;
+    line-height: 1.6;
+    color: $color1;
+    @include mq{
+      font-size: 2rem;
+    }
+  }
+  h3{
+    margin: 1em 0 0 0;
+    text-align: center;
+  }
+  p{
+    line-height: 1.8;
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top:1em;
+    @include mq{
+      font-size: 1.4rem;
+      text-align: left;
+    }
+    &.tel-txt{
+      font-size: 4rem;
+      font-weight: bold;
+      color: $color2;
+      @include mq{
+        text-align: center;
+        font-size: 3rem;
+      }
+    }
+  }
+}
